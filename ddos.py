@@ -6,9 +6,6 @@ print("iran Anonymos")
 time.sleep(7)
 red='\033[31m'
 green='\033[32m'
-os.system("pkg install git -y ")
-os.system("pkg install python3 -y ")
-os.system("pkg install figlet -y ")
 os.system("clear")
 os.system("toilet -f mono12 -F gay iran hacker")
 

